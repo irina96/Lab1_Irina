@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context="com.example.irinacubillovargas.lab1_irina.profileUser">
+
+<LinearLayout
+    android:id="@+id/details"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:stretchColumns="1"
+    android:orientation="vertical"
+    android:gravity="bottom">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <TextView android:text="Name: "
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"/>
+        <EditText android:id="@+id/name"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <TextView android:text="Description: "
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"/>
+        <EditText android:id="@+id/description"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <RadioGroup android:id="@+id/sexo"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/femele"
+                android:text="Femele"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/male"
+                android:text="Male"/>
+        </RadioGroup>
+    </LinearLayout>
+    <Button
+        android:id="@+id/photo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Photo"  />
+    <Button
+        android:id="@+id/save"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Save"  />
+</LinearLayout>
+<ListView android:id="@+id/users"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_above="@+id/details"
+    android:layout_alignParentTop="true" />
+</RelativeLayout>
